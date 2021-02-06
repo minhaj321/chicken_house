@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CHICKEN HOUSE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row header">
+      <div class="col-md-2 m-md-auto mr-auto col-2 order-md-1 order-2 col-4">
+        <figure class="figure">
+          <img src="logo_image.png" id="logo_img" class="figure-img img-fluid rounded" alt="...">
+        </figure>
+      </div>
+      <div class="col-md-5 col m-md-auto order-1 col-8 order-md-2 ">
+        <h1 id="shopping">CHICKEN HOUSE</h1>
+      </div>
+      <div class="col-md-4 order-3 col-8 order-md-3">
+
+      </div>
+    </div>
+    <div class="row navbar">
+      <div class="col">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About & Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <br><br>
+<div id="main_div">
+    <div class="row">
+      <div class="col">
+        <div class="card-deck ">
+          <div class="card col-md-4 m-auto">
+            <img src="organic_img.jpg" class="card-img-top card_img" alt="g1.jpg">
+            <div class="card-body">
+              <p class="card-text card_text">Organic</p>
+              <h5 class="card-title card_title" id="organic_price">Rs/Kg</h5>
+              <button type="button" class="btn order" onclick="typeSelection('Organic Chicken')">Order Now.</button>
+            </div>
+          </div><br>
+          <div class="card col-md-4 m-auto">
+            <img src="desi_chicken.jpg" class="card-img-top card_img" alt="g1.jpg">
+            <div class="card-body">
+              <p class="card-text card_text">Desi</p>
+              <h5 class="card-title card_title" id="desi_price">Rs/Kg</h5>
+              <button type="button" class="btn order" onclick="typeSelection('Desi Chicken')">Order Now.</button>
+            </div>
+          </div><br>
+          <div class="card col-md-4 m-auto">
+            <img src="desi_ghee.jpg" class="card-img-top card_img" alt="g3.jpg">
+            <div class="card-body">
+              <p class="card-text card_text">Desi Ghee</p>
+              <h5 class="card-title card_title" id="ghee_price">Rs/Kg</h5>
+              <button type="button" class="btn order" onclick="typeSelection('Desi Ghee')">Order Now.</button>
+            </div>
+          </div><br>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="form">
+      <div class="form-group col-md-5">
+        <label>Full Name:</label>
+        <input onchange="checkValidation()" type="text" class="form-control" id="name" placeholder="Full Nane">
+      </div>
+      <div class="form-group col-md-5">
+        <label>Phone No:</label>
+        <input onchange="checkValidation()" type="number" class="form-control" id="phone" placeholder="phone no.">
+      </div>
+      <div class="form-group  col-md-11">
+        <label>Address:</label>
+        <input onchange="checkValidation()" type="text" class="form-control" id="address" placeholder="Address">
+      </div>
+      <div class="form-group  col-md-5">
+        <label>Type:</label>
+        <input onchange="checkValidation()" type="text" disabled class="form-control" id="type" placeholder="Select item">
+      </div>
+      <div class="form-group  col-md-5">
+        <label>Number Of Kgs: <span style="color:#3153D2">(min 1Kg)</span></label>
+        <input onchange="checkValidation()" type="number" min="1" class="form-control" id="kgs" placeholder="KGs">
+      </div>
+      <div class="form-group  col-md-5">
+        <label>Total: <span style="color:brown">(Kgs*Price)</span></label>
+        <input disabled onchange="checkValidation()" type="number" class="form-control" id="total" placeholder="Total">
+      </div>
+      <div class="form-group col-md-11">
+        <label>More Description:</label>
+        <input type="text" class="form-control" id="description" placeholder="Description">
+      </div>
+      <p style="margin-left: 13px; color:#E52A95;">(Delivery Charges : 50Rs)</p>
+      <p style="margin-left: 13px; color:brown;">(We are serving only in Karachi)</p>
+      <button type="submit" class="btn btn-primary" id="submit" onclick="myFunction()">Submit</button>
+    </div>
+  </div><br>
+    <div class="row">
+      <div class="col footer">
+        <ul>
+          <li class="copyright"><small>copyright 2020 Chicken House.</small></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyBrMCEzMyjWnuSi8XPgjtlEiysqHq8xRzU",
+      authDomain: "rd-assignment-278a4.firebaseapp.com",
+      databaseURL: "https://rd-assignment-278a4.firebaseio.com",
+      projectId: "rd-assignment-278a4",
+      storageBucket: "rd-assignment-278a4.appspot.com",
+      messagingSenderId: "717730903204",
+      appId: "1:717730903204:web:ef65b43a660c0efb3ea231",
+      measurementId: "G-68NHG78589"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="index.js"></script>
+</body>
+
+</html>

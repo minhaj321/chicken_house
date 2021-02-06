@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+  
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+  
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBrMCEzMyjWnuSi8XPgjtlEiysqHq8xRzU",
+        authDomain: "rd-assignment-278a4.firebaseapp.com",
+        databaseURL: "https://rd-assignment-278a4.firebaseio.com",
+        projectId: "rd-assignment-278a4",
+        storageBucket: "rd-assignment-278a4.appspot.com",
+        messagingSenderId: "717730903204",
+        appId: "1:717730903204:web:ef65b43a660c0efb3ea231",
+        measurementId: "G-68NHG78589"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="details.js"></script>
+</head>
+<body>
+  <input type="number" id="ghee" placeholder="desi ghee">  
+  <input type="number" id="organic" placeholder="organic chicken">  
+  <input type="number" id="desi" placeholder="desi chicken">
+  <button id="button" onclick="setValues()">Send Prices</button>  
+<div id="details"></div>
+
+</body>
+</html>
