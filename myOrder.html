@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Chicken House</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+<body>
+    
+    <div class="container-fluid bg-warning">
+        <div class="row header">
+            <div class="col-md-2 m-md-auto mr-auto col-2 order-md-1 order-2 col-4">
+              <figure class="figure">
+                <img src="logo_image.png" id="logo_img" class="figure-img img-fluid rounded" alt="...">
+              </figure>
+            </div>
+            <div class="col-md-5 col m-md-auto order-1 col-8 order-md-2 ">
+              <h1 id="shopping">CHICKEN HOUSE</h1>
+            </div>
+            <div class="col-md-4 order-3 col-8 order-md-3">
+      
+            </div>
+          </div>
+          <div class="row navbar">
+            <div class="col">
+              <nav class="navbar navbar-expand-lg navbar-light ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+      
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About & Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Your Orders</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+            <!-- input text -->
+          <br>
+          <span class="input-group-text">Check your orders by Phone No.</span>
+        <br>
+          <div class="input-group mb-3">
+            <input type="text" 
+            class="form-control" 
+            placeholder="Enter Phone Number"
+            id="number" 
+            aria-label="Username" aria-describedby="basic-addon1">
+            <button class="btn btn-outline-secondary" type="button" id="check" onclick="checkOrders()">Check Orders</button>
+          </div>
+          <br>
+          <!-- orders_div -->
+          <h2 class="order_heading">Your Orders</h2>
+          <div id="orders_div">
+          </div>
+            <!-- footer -->
+          <div class="row">
+            <div class="col footer">
+              <ul>
+                <li class="copyright"><small>copyright 2020 Chicken House.</small></li>
+              </ul>
+            </div>
+          </div>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"></script>
+      
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+      
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+      
+        <script>
+          var firebaseConfig = {
+            apiKey: "AIzaSyBrMCEzMyjWnuSi8XPgjtlEiysqHq8xRzU",
+            authDomain: "rd-assignment-278a4.firebaseapp.com",
+            databaseURL: "https://rd-assignment-278a4.firebaseio.com",
+            projectId: "rd-assignment-278a4",
+            storageBucket: "rd-assignment-278a4.appspot.com",
+            messagingSenderId: "717730903204",
+            appId: "1:717730903204:web:ef65b43a660c0efb3ea231",
+            measurementId: "G-68NHG78589"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+        </script>
+        <script src="myOrders.js"></script>
+
+    </div>
+
+</body>
+</html>

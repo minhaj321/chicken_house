@@ -7,6 +7,7 @@ document.getElementById('organic_price').innerText=`Rs:${data.val().organic}/Kg`
 document.getElementById('desi_price').innerText=`Rs:${data.val().desi}/Kg`;
 document.getElementById('ghee_price').innerText=`Rs:${data.val().ghee}/Kg`;
 document.getElementById('desi_aata').innerText=`Rs:${data.val().aata}/Pack(5kg)`;
+console.log(data.val().organic)
 })
 
 // validation checking before submit enabled
@@ -63,6 +64,7 @@ var datetime =currentdate.getDate() + "/" + currentdate.getMonth()+1
 + "/" + currentdate.getFullYear() + " @ " 
 + currentdate.getHours() + ":" 
 + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+console.log(datetime)
 
 //creation of object.
 const obj={
@@ -75,14 +77,15 @@ const obj={
     date:datetime,
     total:total
         }
-    var confirmation=confirm(`Your order details:\nName : ${obj.name}\nPhone : ${obj.phone}\nAddress : ${obj.address}\nType : ${obj.type}\nKgs : ${obj.kgs}\nDescription : ${obj.description}\nTotal : ${obj.total}Rs\nDelivery Charges : 50Rs\n
+        console.log(obj)
+    var confirmation=confirm(`Your order details:\nName : ${obj.name}\nPhone : ${obj.phone}\nAddress : ${obj.address}\nType : ${obj.type}\nKgs : ${obj.kgs}\nDescription : ${obj.description}\nTotal : ${obj.total}\n
     "To confirm order click 'Ok'."`);
 //ORDER confiramtion.
     if(confirmation)
     {
         firebase.database().ref('/public').push(obj);
         firebase.database().ref(`/yourOrders/${obj.phone}`).push(obj);
-        alert("your order Have Placed \nThank You.")
+        alert("your order Have been Recieved \nThank You.")
     }   
     else alert("You have cancelled you order.") 
 }
